@@ -122,7 +122,7 @@ async def all_async(url):
     chapter_belum_diupload = [x for index, x in enumerate(
         chapter) if index > last_chapter_index]
 
-    print(f'index akhir {last_chapter_index}')
+    # print(f'index akhir {last_chapter_index}')
     print(f'jumlah chapter akan di upload {len(chapter_belum_diupload)}')
 
     if len(chapter_belum_diupload) <= 0:
@@ -158,7 +158,7 @@ async def main_async():
     jumlah_halaman = 35
     task = []
 
-    for page in range(jumlah_halaman, 30, -1):
+    for page in range(jumlah_halaman, 0, -1):
 
         daftar_komik = halaman_root(page)
         for komik in daftar_komik:
