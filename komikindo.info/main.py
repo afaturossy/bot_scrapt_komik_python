@@ -169,7 +169,6 @@ async def main_async():
             # all(komik)
 
         await asyncio.gather(*task)
-        break
 
 
 if __name__ == "__main__":
