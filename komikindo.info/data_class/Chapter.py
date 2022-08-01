@@ -5,7 +5,7 @@ from dataclasses import dataclass
 class Chapter:
     href: str
     ke: str
-    image: list[str]
+    image: list
 
     def to_dict(self):
         return {'ke': self.ke, 'image': self.image}
