@@ -33,3 +33,19 @@ def baca_gambar_session(list_url:list):
             list_image.append(image)
 
     return list_image
+
+def baca_gambar_session_async(list_url:list):
+    list_image:list[list[str]] = []
+    
+    with requests.Session() as req:
+        
+        for url in list_url:
+            image = []
+            r = req.get(url, headers=headersGlobal)
+            bs = BeautifulSoup(r.text, 'lxml')
+            
+            image = bs.find('div','reader-area').find_all('img')
+            image = [x['src'] for x in image]
+            list_image.append(image)
+
+    return list_image
