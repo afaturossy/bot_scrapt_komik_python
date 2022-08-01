@@ -156,12 +156,14 @@ async def all_async(url):
 
 async def main_async():
     jumlah_halaman = 35
-    task = []
 
     for page in range(jumlah_halaman, 0, -1):
 
         daftar_komik = halaman_root(page)
+        task = []
+
         for komik in daftar_komik:
+
             print(f'{komik} - halaman {page}/{jumlah_halaman}')
 
             task.append(all_async(komik))
