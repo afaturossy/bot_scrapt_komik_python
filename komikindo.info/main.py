@@ -41,7 +41,7 @@ def cekChapterAkhirDiDatabase(judul, list_chapter_ke):
 
             return batas_index
         elif r.status_code == 200 and r.text == 'komik kosong':
-            return 0
+            return -1
         else:
             return None
     except:
@@ -114,6 +114,7 @@ async def all_async(url):
 
     last_chapter_index = cekChapterAkhirDiDatabase(
         komik.judul_seo, list_chapter_ke)
+    
 
     if last_chapter_index == None:
         print(f'{url} -> gagal, respon last_chapter_index None')
