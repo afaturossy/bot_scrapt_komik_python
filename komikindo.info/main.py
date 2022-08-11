@@ -155,7 +155,7 @@ async def all_async(url):
 
 
 async def main_async():
-    jumlah_halaman = 35
+    jumlah_halaman = 16
 
     for page in range(jumlah_halaman, 0, -1):
 
