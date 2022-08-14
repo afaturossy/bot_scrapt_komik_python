@@ -7,7 +7,7 @@ from halaman_root import halaman_root
 from threading import Thread
 import asyncio
 
-NEXT_PUBLIC_BACKEND_DATABASE = 'http://igabut.com:50302'
+NEXT_PUBLIC_BACKEND_DATABASE = 'http://localhost:52010'
 
 
 def uploadKomik(data_json: dict):
@@ -156,7 +156,7 @@ async def all_async(url):
 
 
 async def main_async():
-    jumlah_halaman = 16
+    jumlah_halaman = 35
 
     for page in range(jumlah_halaman, 0, -1):
 
