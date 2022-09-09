@@ -1,4 +1,3 @@
-from httpx import main
 import requests
 from baca_gambar import baca_gambar, baca_gambar_session
 from detail_komik import detail
@@ -156,7 +155,7 @@ async def all_async(url):
 
 
 async def main_async():
-    jumlah_halaman = 35
+    jumlah_halaman = 2
 
     for page in range(jumlah_halaman, 0, -1):
 
