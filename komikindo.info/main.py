@@ -130,7 +130,17 @@ async def all_async(url):
 
     list_image = [x.href for index, x in enumerate(chapter_belum_diupload)]
 
+
     list_image = baca_gambar_session(list_image)
+
+    # upload list_image ke cdn private
+    for i in list_image:
+        for i2 in i:
+            try:
+                requests.get("http://localhost:51230?url={i2}")
+            except:
+                pass
+    # -------------------------------
 
     new_chapter = [Chapter(x.href, x.ke, image=list_image[index])
                    for index, x in enumerate(chapter_belum_diupload)]
